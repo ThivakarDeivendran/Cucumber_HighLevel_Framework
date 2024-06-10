@@ -150,7 +150,7 @@ public class CommonUtil {
 		try {
 			common_search_page common = new Common_search_page();
 			SharedConstants shared = new SharedConstants();
-			DataBaseUtil db = new DataBaseUtil();
+			DataBaseUtils db = new DataBaseUtils();
 			
 			Map<String, Object> testData = db.get_test_data_from_database(testcaseID);
 			JSONParser parser = new JSONParser();
