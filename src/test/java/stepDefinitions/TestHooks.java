@@ -171,8 +171,8 @@ public class TestHooks extends Base_Test{
 	public static void afterStep(Scenario scenario) throws IOException {
 		logger.error("This will run after every Step");
 		if (scenario.isFailed()) {
-			TakesScreenshot screenshot Taker(TakesScreenshot) driver;
-			byte[] screenshot screenshotTaker.getScreenshotAs(OutputType.BYTES);
+			TakesScreenshot screenshotTaker=(TakesScreenshot) driver;
+			byte[] screenshot =screenshotTaker.getScreenshotAs(OutputType.BYTES);
 
 			// Attach the screenshot to the Allure report
 			Allure.addAttachment("Screenshot on failure", new ByteArrayInputStream(screenshot));
